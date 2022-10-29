@@ -3,15 +3,17 @@ package com.moodanalzrProgram;
 import java.util.Scanner;
 
 public class MoodAnalyserProgram {
-	public String mood() {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the mood");
-		String mood=sc.next(); 
-			return mood;
-	}
+	
+	 public MoodAnalyserProgram() {
+			System.out.println("Happy");
+		 }		
+	 public MoodAnalyserProgram(String msg) {
+		System.out.println(msg);
+	 }	
 	public static void main(String[] args) {
-		MoodAnalyserProgram obj=new MoodAnalyserProgram();
-		System.out.println(obj.mood());
+		MoodAnalyserProgram obj1=new MoodAnalyserProgram();
+		MoodAnalyserProgram obj=new MoodAnalyserProgram("Sad");
+	
 
 	}
 
