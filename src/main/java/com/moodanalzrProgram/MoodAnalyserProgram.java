@@ -1,20 +1,37 @@
 package com.moodanalzrProgram;
 
-import java.util.Scanner;
-
 public class MoodAnalyserProgram {
+	String message;
+	public MoodAnalyserProgram() {
+		this.message=message;
+	}
+	public MoodAnalyserProgram(String message) {
+		this.message=message;
+	}
+	 
+	public String analyseMood(String message) throws MoodAnalysisException {
+		this.message=message;
+		return analyseMood();
+	}
+	public String analyseMood() throws MoodAnalysisException {
+		try {
+			if (message.contains("Sad")) {
+				System.out.println("Sad");
+				return "Sad";
+			}
+			else {
+				System.out.println("Sad"); 
+				return "Happy";
+			}
+		}
+		catch (NullPointerException e) {
+			throw new MoodAnalysisException(null, "Please enter Emotion");
+		}
+	}
 	
-	 public MoodAnalyserProgram() {
-			System.out.println("Happy");
-		 }		
-	 public MoodAnalyserProgram(String msg) {
-		System.out.println(msg);
-	 }	
-	public static void main(String[] args) {
-		MoodAnalyserProgram obj1=new MoodAnalyserProgram();
-		MoodAnalyserProgram obj=new MoodAnalyserProgram("Sad");
-	
-
+	public static void main(String[] args) throws MoodAnalysisException {
+		MoodAnalyserProgram obj=new MoodAnalyserProgram();
+        obj.analyseMood();
 	}
 
 }
