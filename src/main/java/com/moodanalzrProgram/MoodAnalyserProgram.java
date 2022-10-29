@@ -25,7 +25,7 @@ public class MoodAnalyserProgram {
 			}
 		}
 		catch (NullPointerException e) {
-			throw new MoodAnalysisException(null, "Please enter Emotion");
+			throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_EMPTY,"Please enter Valid Emotion");
 		}
 	}
 	
